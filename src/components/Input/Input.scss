@@ -1,6 +1,3 @@
-* {
-  box-sizing: border-box;
-}
 .input,
 .input.dark {
   &.light {
@@ -15,10 +12,14 @@
         border-color: #9c9c9c;
       }
       &:focus {
+        outline: none;
         border-color: #575757;
       }
       &::placeholder {
         color: #9c9c9c;
+      }
+      &.error {
+        border-color: #ae2917;
       }
     }
   }
@@ -46,6 +47,13 @@
     &::placeholder {
       color: #9c9c9c;
     }
+    &:focus {
+      outline: none;
+      border-color: #dedede;
+    }
+    &.error {
+      border-color: #ae2917;
+    }
   }
   &__error {
     display: flex;
@@ -59,5 +67,10 @@
     color: #ae2917;
     font-size: 12px;
     margin-top: 1px;
+  }
+  &.error {
+    .input__area {
+      border-color: #ae2917;
+    }
   }
 }

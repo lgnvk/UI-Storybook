@@ -4,8 +4,8 @@ import cn from "classnames";
 
 interface IInput {
   theme: "dark" | "light" | undefined;
-  inputValue: string | undefined;
-  fieldValue: string | undefined;
+  inputValue: string;
+  fieldValue: string;
   error: boolean;
 }
 
@@ -17,6 +17,9 @@ export const Input: FC<IInput & HTMLInputElement> = ({
   ...others
 }) => {
   const input = cn("input", theme);
+  const inputArea = cn("input__area", {
+    error: error,
+  });
 
   return (
     <div className={input}>
@@ -24,7 +27,7 @@ export const Input: FC<IInput & HTMLInputElement> = ({
       <input
         type="text"
         value={inputValue}
-        className="input__area"
+        className={inputArea}
         placeholder="Placeholder"
       />
       {error ? (
