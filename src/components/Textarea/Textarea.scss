@@ -1,10 +1,10 @@
-.input,
-.input.dark {
+.textarea,
+.textarea.dark {
   &.light {
-    .input__name {
+    .textarea__description {
       color: black;
     }
-    .input__area {
+    .textarea__input {
       color: #575757;
       background-color: white;
       border: 1px solid white;
@@ -15,37 +15,32 @@
         outline: none;
         border-color: #575757;
       }
-      &::placeholder {
-        color: #9c9c9c;
-      }
       &.error {
         border-color: #ae2917;
       }
     }
   }
-  &__name {
+  &__description {
     color: white;
-    font-size: 12px;
-    margin-bottom: 8px;
     font-weight: 700;
-    line-height: 12px;
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 8px;
   }
-  &__area {
-    width: 340px;
-    height: 45px;
+  &__input {
     color: #dedede;
+    height: 150px;
+    width: 340px;
     background-color: #1a1818;
     border: 1px solid #1a1818;
+    border-radius: 4px;
     font-size: 16px;
     padding-left: 16px;
-    border-radius: 4px;
+    padding-top: 12px;
     font-weight: 300;
     line-height: 16px;
     &:hover {
-      border-color: #575757;
-    }
-    &::placeholder {
-      color: #9c9c9c;
+      border: 1px solid #575757;
     }
     &:focus {
       outline: none;
@@ -67,10 +62,5 @@
     color: #ae2917;
     font-size: 12px;
     margin-top: 1px;
-  }
-  &.error {
-    .input__area {
-      border-color: #ae2917;
-    }
   }
 }

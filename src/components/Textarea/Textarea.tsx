@@ -1,38 +1,32 @@
 import React, { FC } from "react";
-import "./Input.scss";
+import "./Textarea.scss";
 import cn from "classnames";
 
-interface IInput {
-  theme: "dark" | "light" | undefined;
-  inputValue: string;
+interface ITextarea {
   fieldValue: string;
+  inputValue: string;
+  theme: "dark" | "light" | undefined;
   error: boolean;
 }
 
-export const Input: FC<IInput & HTMLInputElement> = ({
+const Textarea: FC<ITextarea & HTMLTextAreaElement> = ({
+  fieldValue,
   inputValue,
   theme,
-  fieldValue,
   error,
   ...others
 }) => {
-  const input = cn("input", theme);
-  const inputArea = cn("input__area", {
+  const textarea = cn("textarea", theme);
+  const textareaInput = cn("textarea__input", {
     error: error,
   });
-
   return (
-    <div className={input}>
-      <div className="input__name">{fieldValue}</div>
-      <input
-        type="text"
-        value={inputValue}
-        className={inputArea}
-        placeholder="Placeholder"
-      />
+    <div className={textarea}>
+      <div className="textarea__description">{fieldValue}</div>
+      <textarea value={inputValue} className={textareaInput} />
       {error ? (
-        <div className="input__error">
-          <div className="input__icon">
+        <div className="textarea__error">
+          <div className="textarea__icon">
             <svg
               width="16"
               height="16"
@@ -45,7 +39,7 @@ export const Input: FC<IInput & HTMLInputElement> = ({
               />
             </svg>
           </div>
-          <span className="input__message">This is an error message!</span>
+          <span className="textarea__message">This is an error message!</span>
         </div>
       ) : (
         ""
@@ -54,4 +48,4 @@ export const Input: FC<IInput & HTMLInputElement> = ({
   );
 };
 
-export default Input;
+export default Textarea;
