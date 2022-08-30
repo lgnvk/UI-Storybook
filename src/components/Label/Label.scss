@@ -1,0 +1,50 @@
+.label {
+  width: max-content;
+  height: 33px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 16px;
+
+  border-radius: 30px;
+  &__text {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 12px;
+  }
+  &__cross {
+    padding-left: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &.dark {
+    background: rgba(205, 205, 205, 0.05);
+    border: 1px solid #ffffff;
+    .label {
+      &__text {
+        color: #dedede;
+      }
+      &__cross {
+        path {
+          fill: #dedede;
+        }
+      }
+    }
+  }
+  &.light {
+    background: rgba(18, 18, 18, 0.05);
+    border: 1px solid rgba(18, 18, 18, 0);
+    .label {
+      &__text {
+        color: #575757;
+      }
+      &__cross {
+        path {
+          fill: #575757;
+        }
+      }
+    }
+  }
+}
