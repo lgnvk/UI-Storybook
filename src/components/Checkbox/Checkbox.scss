@@ -1,0 +1,31 @@
+.option {
+  display: flex;
+  align-items: center;
+  &.dark {
+    .option__checkbox {
+      path {
+        fill: white;
+      }
+      background: #121212;
+      border: 1px solid #121212;
+    }
+  }
+  &.light {
+    .option__checkbox {
+      path {
+        fill: black;
+      }
+      background: white;
+      border: 1px solid white;
+    }
+  }
+  &__checkbox {
+    display: block;
+    height: 20px;
+    width: 20px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
