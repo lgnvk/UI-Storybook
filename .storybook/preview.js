@@ -7,15 +7,15 @@ export const parameters = {
     },
   },
   backgrounds: {
-    default: "grey",
+    default: "dark",
     values: [
       {
-        name: "grey",
-        value: "#cacaca",
+        name: "dark",
+        value: "#121212",
       },
       {
-        name: "facebook",
-        value: "#3b5998",
+        name: "light",
+        value: "#ffffff",
       },
     ],
   },
