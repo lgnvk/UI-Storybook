@@ -1,12 +1,67 @@
 .multiselect {
   width: 340px;
 
-  &__name {
-    color: #dedede;
+  &.dark {
+    .multiselect {
+      &__name {
+        color: #dedede;
+      }
+
+      &__wrapper {
+        background: #1a1818;
+      }
+
+      &__button {
+        border-color: #1a1818;
+
+        &:hover {
+          border-color: #575757;
+        }
+
+        &:focus {
+          border-color: #dedede;
+        }
+      }
+
+      &__option {
+        &-text {
+          color: #dedede;
+        }
+      }
+    }
+  }
+
+  &.light {
+    .multiselect {
+      &__name {
+        color: rgba(18, 18, 18, 1);
+      }
+
+      &__wrapper {
+        background: rgba(255, 255, 255, 1);
+      }
+
+      &__button {
+        border-color: rgba(222, 222, 222, 1);
+
+        &:hover {
+          border-color: rgba(156, 156, 156, 1);
+        }
+
+        &:focus {
+          border-color: rgba(87, 87, 87, 1);
+        }
+      }
+
+      &__option {
+        &-text {
+          color: rgba(87, 87, 87, 1);
+        }
+      }
+    }
   }
 
   &__wrapper {
-    background: #1a1818;
     border-radius: 4px;
   }
 
@@ -15,21 +70,14 @@
     width: 100%;
     min-height: 46px;
     background: none;
-    border: 1px solid #1a1818;
+    border: 1px solid;
     border-radius: 4px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     padding: 0 32px 0 16px;
-
-    &:hover {
-      border-color: #575757;
-    }
-
-    &:focus {
-      border-color: #dedede;
-    }
+    cursor: pointer;
   }
 
   &__label {
@@ -52,9 +100,9 @@
     display: flex;
     align-items: center;
     padding: 0 16px;
+    cursor: pointer;
 
     &-text {
-      color: #dedede;
       margin-left: 12px;
       font-weight: 300;
       font-size: 16px;

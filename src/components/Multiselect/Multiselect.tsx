@@ -16,7 +16,7 @@ type OptionType = {
   checked: boolean;
 };
 
-const Multiselect: FC<MultiselectType> = ({ name, options }) => {
+const Multiselect: FC<MultiselectType> = ({ name, options, theme }) => {
   const [optionsmod, setOptions] = useState(options);
   const [active, setActive] = useState(false);
 
@@ -24,26 +24,28 @@ const Multiselect: FC<MultiselectType> = ({ name, options }) => {
   const activeToggler = () => {
     setActive(!active);
   };
-  const checkToggler = (id: number) => {
+  const checkToggler = (id: number, event: any) => {
+    event.stopPropagation();
     const newOptions = [...optionsmod];
     newOptions[id - 1].checked = !newOptions[id - 1].checked;
     setOptions(newOptions);
   };
   return (
-    <div className={cx("multiselect")}>
+    <div className={cx("multiselect", theme)}>
       <div className={cx("multiselect__name")}>{name}</div>
       <div className="multiselect__wrapper">
         <button
           className={cx("multiselect__button")}
           onClick={() => activeToggler()}
-          value={1}>
+        >
           {optionsmod.map((el) => (
             <div>
               {el.checked && (
                 <div
                   className={cx("multiselect__label")}
-                  onClick={() => checkToggler(el.id)}>
-                  <Label theme="dark" withCross="true">
+                  onClick={(event) => checkToggler(el.id, event)}
+                >
+                  <Label theme={theme} withCross="true">
                     {el.name}
                   </Label>
                 </div>
@@ -54,14 +56,16 @@ const Multiselect: FC<MultiselectType> = ({ name, options }) => {
         <div
           className={cx("multiselect__options", {
             multiselect__options_active: active,
-          })}>
+          })}
+        >
           {options.map((el) => (
             <div
               key={el.id}
               className={cx("multiselect__option")}
-              onClick={() => checkToggler(el.id)}>
+              onClick={(event) => checkToggler(el.id, event)}
+            >
               <Checkbox
-                theme="dark"
+                theme={theme}
                 isChecked={el.checked}
                 className={cx("multiselect__option-checkbox")}
               />
