@@ -1,0 +1,63 @@
+.multiselect {
+  width: 340px;
+
+  &__name {
+    color: #dedede;
+  }
+
+  &__wrapper {
+    background: #1a1818;
+    border-radius: 4px;
+  }
+
+  &__button {
+    font-size: 0;
+    width: 100%;
+    min-height: 46px;
+    background: none;
+    border: 1px solid #1a1818;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 32px 0 16px;
+
+    &:hover {
+      border-color: #575757;
+    }
+
+    &:focus {
+      border-color: #dedede;
+    }
+  }
+
+  &__label {
+    margin: 2px 8px 2px 0;
+    background: none;
+    border: none;
+  }
+
+  &__options {
+    background: none;
+    display: none;
+
+    &_active {
+      display: block;
+    }
+  }
+
+  &__option {
+    height: 45px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+
+    &-text {
+      color: #dedede;
+      margin-left: 12px;
+      font-weight: 300;
+      font-size: 16px;
+    }
+  }
+}
