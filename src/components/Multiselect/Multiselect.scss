@@ -28,6 +28,10 @@
           color: #dedede;
         }
       }
+
+      &__dots {
+        color: #dedede;
+      }
     }
   }
 
@@ -57,6 +61,10 @@
         &-text {
           color: rgba(87, 87, 87, 1);
         }
+      }
+
+      &__dots {
+        color: rgba(87, 87, 87, 1);
       }
     }
   }
@@ -107,5 +115,14 @@
       font-weight: 300;
       font-size: 16px;
     }
+  }
+  &__dots {
+    width: 24px;
+    height: 24px;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
   }
 }
