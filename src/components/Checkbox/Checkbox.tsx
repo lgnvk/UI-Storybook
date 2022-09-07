@@ -4,7 +4,6 @@ import "./Checkbox.scss";
 
 type ICheckbox = {
   isChecked: boolean;
-  children: string;
   theme: "dark" | "light";
 };
 
