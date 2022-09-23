@@ -24,7 +24,9 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "lint": "eslint --fix --color src/",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -71,6 +73,7 @@
     "classnames": "^2.3.1",
     "eslint": "^8.23.1",
     "eslint-plugin-react": "^7.31.8",
+    "gh-pages": "^4.0.0",
     "husky": "^8.0.1",
     "prop-types": "^15.8.1",
     "sass": "^1.54.5",
