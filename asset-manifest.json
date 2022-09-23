@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/UI-Storybook/static/css/main.33b771b3.css",
-    "main.js": "/UI-Storybook/static/js/main.1a600fcc.js",
+    "main.js": "/UI-Storybook/static/js/main.f54fcf7a.js",
     "index.html": "/UI-Storybook/index.html",
     "main.33b771b3.css.map": "/UI-Storybook/static/css/main.33b771b3.css.map",
-    "main.1a600fcc.js.map": "/UI-Storybook/static/js/main.1a600fcc.js.map"
+    "main.f54fcf7a.js.map": "/UI-Storybook/static/js/main.f54fcf7a.js.map"
   },
   "entrypoints": [
     "static/css/main.33b771b3.css",
-    "static/js/main.1a600fcc.js"
+    "static/js/main.f54fcf7a.js"
   ]
 }
