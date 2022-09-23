@@ -1,15 +1,15 @@
-import React, { FC } from "react";
+import React, { FC, InputHTMLAttributes } from "react";
 import "./Input.scss";
 import cn from "classnames";
 
-interface IInput {
+type InputType = InputHTMLAttributes<HTMLInputElement> & {
   theme: "dark" | "light" | undefined;
   inputValue: string;
   fieldValue: string;
   error: boolean;
-}
+};
 
-export const Input: FC<IInput & HTMLInputElement> = ({
+export const Input: FC<InputType> = ({
   inputValue,
   theme,
   fieldValue,

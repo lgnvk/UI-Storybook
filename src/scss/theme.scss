@@ -1,0 +1,19 @@
+html[data-theme='dark'] {
+  --background-color: var(--primary-black);
+  --text-color: var(--primary-light-gray);
+
+  --header-theme-round: var(--secondary-black);
+  --header-theme-hover: var(--primary-white);
+
+  --accent-color: var(--accent-gold);
+}
+
+html[data-theme='light'] {
+  --background-color: var(--primary-white);
+  --text-color: var(--primary-dark-gray);
+
+  --header-theme-round: var(--primary-white);
+  --header-theme-hover: var(--primary-black);
+
+  --accent-color: var(--accent-red);
+}
