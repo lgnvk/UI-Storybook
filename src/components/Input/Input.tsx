@@ -8,7 +8,7 @@ type InputType = InputHTMLAttributes<HTMLInputElement> & {
   fieldValue: string;
   error: boolean;
 };
-
+a;
 export const Input: FC<InputType> = ({
   inputValue,
   theme,
